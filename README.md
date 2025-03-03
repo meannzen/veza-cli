@@ -1,8 +1,8 @@
 # veza-cli for vezacloud
 
 ```sh
-export URL="https://your-graphql-api.com/graphql"
-export TOKEN="your-secret-token"
+export API_URL="https://your-graphql-api.com/graphql"
+export API_TOKEN="your-secret-token"
 ```
 
 # General command
