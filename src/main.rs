@@ -5,6 +5,7 @@ mod core;
 mod models;
 mod query;
 mod service;
+mod utils;
 
 use clap::Parser;
 use cli::Cli;
