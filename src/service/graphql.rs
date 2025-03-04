@@ -4,6 +4,7 @@ use reqwest::{
     Client,
     header::{AUTHORIZATION, CONTENT_TYPE},
 };
+use secrecy::ExposeSecret;
 use serde_json::Value;
 use tracing::{error, info};
 
@@ -19,8 +20,13 @@ impl GraphQLService {
     pub fn new(config: &Config) -> Self {
         GraphQLService {
             client: Client::new(),
-            base_url: config.api_url.clone(),
-            token: config.api_token.clone(),
+            base_url: config.backend_api_setting.base_url.clone(),
+            token: config
+                .backend_api_setting
+                .api_token
+                .expose_secret()
+                .to_string()
+                .clone(),
         }
     }
 
