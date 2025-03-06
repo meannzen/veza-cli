@@ -33,7 +33,7 @@ pub enum FormatCommand {
     /// Reads stops from an Excel file, formats them, and optionally writes to a new Excel file.
     ReadXlsx(ReadXlsxFormatArgs),
 
-    StopID(StopIDArgs)
+    StopID(StopIDArgs),
 }
 
 #[derive(Args, Debug)]
@@ -41,7 +41,7 @@ pub struct StopIDArgs {
     #[arg(short = 'p', long = "pattern", default_value = "ST000000")]
     pub pattern: String,
     #[arg(short = 'o', long = "organization")]
-    pub organization_id: String
+    pub organization_id: String,
 }
 
 #[derive(Args, Debug)]

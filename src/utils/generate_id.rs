@@ -56,5 +56,4 @@ mod tests {
         assert_eq!(generate_stop_id("", 0), "1");
         assert_eq!(generate_stop_id("", 5), "6");
     }
-
 }

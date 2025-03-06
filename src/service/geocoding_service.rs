@@ -28,7 +28,10 @@ impl<'a> GeocodingService<'a> {
                 ("q", stop.position.as_str()),
                 (
                     "access_token",
-                    self.config.map_box_client_setting.map_api_token.expose_secret(),
+                    self.config
+                        .map_box_client_setting
+                        .map_api_token
+                        .expose_secret(),
                 ),
             ],
         )?;
@@ -60,7 +63,10 @@ impl<'a> GeocodingService<'a> {
 
                             warn!(
                                 "Rate limit hit for {}. Retrying after {}s (attempt {}/{})",
-                                url, retry_after, attempt + 1, max_retries
+                                url,
+                                retry_after,
+                                attempt + 1,
+                                max_retries
                             );
                             tokio::time::sleep(Duration::from_secs(retry_after)).await;
                             attempt += 1;
@@ -91,14 +97,10 @@ impl<'a> GeocodingService<'a> {
                             let coords = feature["geometry"]["coordinates"]
                                 .as_array()
                                 .ok_or("Missing geometry coordinates")?;
-                            stop.longitude = coords[0]
-                                .as_f64()
-                                .ok_or("Invalid longitude")?
-                                .to_string();
-                            stop.latitude = coords[1]
-                                .as_f64()
-                                .ok_or("Invalid latitude")?
-                                .to_string();
+                            stop.longitude =
+                                coords[0].as_f64().ok_or("Invalid longitude")?.to_string();
+                            stop.latitude =
+                                coords[1].as_f64().ok_or("Invalid latitude")?.to_string();
 
                             info!(
                                 "Geocoded {} to ({}, {})",
@@ -235,7 +237,7 @@ mod tests {
         let mut server = Server::new_async().await;
         let (mock, config) = setup_mock_server(&mut server).await;
         let client = Client::new();
-        let service = GeocodingService::new(client ,&config);
+        let service = GeocodingService::new(client, &config);
 
         let mut stop = Stop {
             id: "1".to_string(),
@@ -257,7 +259,7 @@ mod tests {
         let mut server = Server::new_async().await;
         let (mock, config) = setup_mock_server_no_results(&mut server).await;
         let client = Client::new();
-        let service = GeocodingService::new(client ,&config);
+        let service = GeocodingService::new(client, &config);
 
         let mut stop = Stop {
             id: "1".to_string(),
