@@ -1,4 +1,4 @@
-use std::collections::HashMap;
+use std::{collections::HashMap, fmt::Debug};
 
 use serde::{Deserialize, Serialize};
 
@@ -29,6 +29,18 @@ pub struct QueryArgs {
     pub take: Option<u64>,
     pub skip: Option<u64>,
     pub cursor: Option<Cursor>,
+}
+
+#[derive(Serialize, Deserialize, Debug)]
+pub struct MutationArgs<D, W> {
+    pub data: Vec<MutationsData<D, W>>,
+}
+
+#[derive(Serialize, Deserialize, Debug)]
+pub struct MutationsData<D, W> {
+    pub data: D,
+    #[serde(rename = "where")]
+    pub wheres: W,
 }
 
 impl Default for QueryArgs {

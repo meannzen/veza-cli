@@ -3,6 +3,7 @@ mod cli;
 mod config;
 mod core;
 mod models;
+mod mutation;
 mod query;
 mod service;
 mod utils;
