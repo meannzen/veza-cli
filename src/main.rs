@@ -6,6 +6,7 @@ mod models;
 mod query;
 mod service;
 mod utils;
+mod mutation;
 
 use clap::Parser;
 use cli::Cli;
