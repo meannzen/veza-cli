@@ -8,7 +8,7 @@ pub async fn stop_mutation<'de, D, W>(
 ) -> Result<(), Box<dyn std::error::Error>>
 where
     D: Serialize + Deserialize<'de>,
-    W: Serialize + Deserialize<'de>, // Add this trait bound
+    W: Serialize + Deserialize<'de>, 
 {
     let mutation = r#"
         mutation UpdateStops($data: [StopUpdateArgs!]!) {
