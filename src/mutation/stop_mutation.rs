@@ -1,5 +1,5 @@
 use crate::{query::MutationArgs, service::graphql::GraphQLService};
-use serde::{Deserialize, Serialize}; 
+use serde::{Deserialize, Serialize};
 use serde_json::json;
 
 pub async fn stop_mutation<'de, D, W>(
@@ -8,7 +8,7 @@ pub async fn stop_mutation<'de, D, W>(
 ) -> Result<(), Box<dyn std::error::Error>>
 where
     D: Serialize + Deserialize<'de>,
-    W: Serialize + Deserialize<'de>, 
+    W: Serialize + Deserialize<'de>,
 {
     let mutation = r#"
         mutation UpdateStops($data: [StopUpdateArgs!]!) {
