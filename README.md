@@ -3,6 +3,8 @@
 ```sh
 export API_URL="https://your-graphql-api.com/graphql"
 export API_TOKEN="your-secret-token"
+export MAP_BOX_URL="your_map_box_ur"
+export MAP_BOX_TOKEN="map_box_token"
 ```
 
 ## Overview
