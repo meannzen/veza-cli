@@ -1,4 +1,5 @@
 # veza-cli Usage Guide
+this project under develop not ready for production
 
 ```sh
 export API_URL="https://your-graphql-api.com/graphql"
