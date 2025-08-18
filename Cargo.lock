@@ -160,9 +160,9 @@ checksum = "f61dac84819c6588b558454b194026eb1f09c293b9036ae9b159e74e73ab6cf9"
 
 [[package]]
 name = "calamine"
-version = "0.30.0"
+version = "0.29.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a9aeb09f84576a634da713630e11e431a744b91f1f8114c2ff0760189783a8a1"
+checksum = "c779dabf85f0e5764a88dc28df403aa09e43fb869344f24cf1813a86854fa3ef"
 dependencies = [
  "atoi_simd",
  "byteorder",
@@ -1270,9 +1270,9 @@ dependencies = [
 
 [[package]]
 name = "rust_xlsxwriter"
-version = "0.89.1"
+version = "0.90.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "2a34eb37ee39e82b74f8a56cf0fe425586cee6e721839f14469d2648352651db"
+checksum = "4fc4507df5e1c3ab599b1434c3e71ef14684d9b21cfbf1d3f1315cda74a47320"
 dependencies = [
  "zip",
 ]
