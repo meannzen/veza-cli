@@ -4,8 +4,8 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-calamine = "0.30.0"
 clap = { version = "4.5.47", features = ["derive"] }
+calamine = "0.30.1"
 dotenv = "0.15.0"
 futures = "0.3.31"
 reqwest = { version = "0.12.23", features = ["json"] }
@@ -14,7 +14,7 @@ rust_xlsxwriter = "0.90.0"
 secrecy = { version = "0.10.3", features = ["serde"] }
 serde = { version = "1.0.219", features = ["derive"] }
 tokio = { version = "1.47.1", features = ["full"] }
-serde_json = "1.0.142"
+serde_json = "1.0.143"
 tracing = "0.1.41"
 tracing-subscriber = "0.3.20"
 urlencoding = "2.1.3"
