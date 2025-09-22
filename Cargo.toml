@@ -9,7 +9,7 @@ calamine = "0.30.1"
 dotenv = "0.15.0"
 futures = "0.3.31"
 reqwest = { version = "0.12.23", features = ["json"] }
-rust_xlsxwriter = "0.90.0"
+rust_xlsxwriter = "0.90.1"
 
 secrecy = { version = "0.10.3", features = ["serde"] }
 serde = { version = "1.0.223", features = ["derive"] }
