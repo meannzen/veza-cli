@@ -5,7 +5,7 @@ edition = "2024"
 
 [dependencies]
 clap = { version = "4.5.51", features = ["derive"] }
-calamine = "0.31.0"
+calamine = "0.32.0"
 dotenv = "0.15.0"
 futures = "0.3.31"
 reqwest = { version = "0.12.24", features = ["json"] }
