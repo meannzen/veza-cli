@@ -5,17 +5,15 @@ edition = "2024"
 
 [dependencies]
 calamine = "0.32.0"
-clap = { version = "4.5.53", features = ["derive"] }
+clap = { version = "4.5.54", features = ["derive"] }
 dotenv = "0.15.0"
 futures = "0.3.31"
-reqwest = { version = "0.12.28", features = ["json"] }
-rust_xlsxwriter = "0.92.2"
-
+reqwest = { version = "0.13.1", features = ["json"] }
+rust_xlsxwriter = "0.92.3"
 secrecy = { version = "0.10.3", features = ["serde"] }
 serde = { version = "1.0.228", features = ["derive"] }
 tokio = { version = "1.49.0", features = ["full"] }
 serde_json = "1.0.148"
-tracing = "0.1.41"
 tracing-subscriber = "0.3.22"
 urlencoding = "2.1.3"
 
